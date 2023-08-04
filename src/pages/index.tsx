@@ -9,6 +9,7 @@ import { GetTheApp } from "@/components/getTheApp";
 import { WeFresh } from "@/components/weFresh";
 import { Footer } from "@/components/footer";
 import { GotQuestions } from "@/components/gotQuestion";
+import Head from "next/head";
 
 export default function Home() {
   return (
