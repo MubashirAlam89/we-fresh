@@ -1,6 +1,6 @@
 # WeFresh Landing Page
 
-![WeFresh Logo](./public/logo.png)
+![WeFresh Logo](./public/logo-2.png)
 
 Welcome to WeFresh Landing Page, an online shopping mart built using Next.js with TypeScript and Tailwind CSS.
 
@@ -28,7 +28,7 @@ for live demo of WeFresh &#128073; <a href="https://we-fresh-project.netlify.app
 - **[Next js](https://nextjs.org/):** A React framework for building server-rendered applications.
 - **[Typescript](https://www.typescriptlang.org/):** A typed superset of JavaScript that compiles to plain JavaScript.
 - **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapid UI development.
-- **[Netlify](https://.com/):** Hosting and continuous deployment platform.
+- **[Netlify](https://netlify.com/):** Hosting and continuous deployment platform.
 
 ## Installation
 
