@@ -17,26 +17,26 @@ export const Accordian: NextPage<props> = ({
         toggleAccordian(index);
       }}
       key={index}
-      className={`border-[1px] duration-500 max-md:border-x-0 max-md:border-t-0 max-md:rounded-none rounded-lg px-6 py-4 transition-all ${
-        acrdn.open ? "border-blue-500 max-h-full" : "border-black/20  min-h-fit"
+      className={`border-[1px] max-md:border-x-0 max-md:border-t-0 max-md:rounded-none rounded-lg px-6 py-4 transition-all  ${
+        acrdn.open ? "border-blue-500 " : "border-black/20  "
       }`}
     >
       <div
-        className={`transition-all duration-200 font-semibold ${
+        className={`transition-all  font-semibold ${
           acrdn.open ? "text-blue-500" : "text-black"
         } flex justify-between items-center gap-5 text-2xl`}
       >
-        {acrdn.question}
+        <h1>{acrdn.question}</h1>
       </div>
-      <div
-        className={` origin-top text-xl" ${
+      <p
+        className={`  text-xl transition-all duration-500   overflow-hidden " ${
           acrdn.open
-            ? "max-h-[300px] transition-all duration-200 scale-y-100 mt-3"
-            : "max-h-0 scale-y-0 "
+            ? "max-h-[3000px]  ease-[cubic-bezier(1,0,1,0)] "
+            : "max-h-0  ease-[cubic-bezier(0,1,0,1)]"
         }`}
       >
         {acrdn.answer}
-      </div>
+      </p>
     </div>
   );
 };
