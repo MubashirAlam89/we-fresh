@@ -1,8 +1,13 @@
 import { Input } from "./common-componenets/input";
 import { Button } from "./common-componenets/button";
 import Image from "next/image";
+import { useState } from "react";
 
 export const FindUs = () => {
+  const [inpValue, setInpValue] = useState<string>("");
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInpValue(e.target.value);
+  };
   return (
     <div className="relative">
       <div className="max-w-[1200px] px-10 max-md:px-5 py-28 max-lg:mb-60 max-sm:mb-40 max-[500px]:mb-32 mx-auto flex justify-between items-center max-lg:flex-wrap max-lg:justify-center gap-20 max-sm:gap-32">
@@ -22,7 +27,12 @@ export const FindUs = () => {
           </h1>
           <div className="flex justify-between gap-5 mt-5 items-stretch">
             <div className="w-full ">
-              <Input placeholder="Enter your area" />
+              <Input
+                inpValue={inpValue}
+                maxLength={25}
+                onChange={handleOnChange}
+                placeholder="Enter your area"
+              />
             </div>
             <div>
               <Button styles={""} content="Search" />
