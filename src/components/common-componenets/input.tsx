@@ -1,3 +1,4 @@
+import { kMaxLength } from "buffer";
 import { NextPage } from "next";
 import { type } from "os";
 import React from "react";
@@ -6,11 +7,18 @@ interface props {
   placeholder: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   inpValue: string;
+  maxLength: number;
 }
 
-export const Input: NextPage<props> = ({ placeholder, onChange, inpValue }) => {
+export const Input: NextPage<props> = ({
+  placeholder,
+  onChange,
+  inpValue,
+  maxLength,
+}) => {
   return (
     <input
+      maxLength={maxLength}
       type="text"
       placeholder={placeholder}
       onChange={onChange}
