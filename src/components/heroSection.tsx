@@ -28,7 +28,7 @@ export const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="hidden max-lg:block absolute  w-[85%] -top-96 max-md:-top-28 max-[500px]:-top-4 max-[400px]:top-28   ">
+      <div className="hidden max-lg:block absolute  w-[85%] -top-96 max-md:-top-28 max-[500px]:-top-4 max-[400px]:top-28   -z-10">
         <Image
           src={"/hero-section-curves/mobile-view-curve2.png"}
           alt=""
