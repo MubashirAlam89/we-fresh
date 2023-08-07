@@ -1,6 +1,4 @@
-import { kMaxLength } from "buffer";
 import { NextPage } from "next";
-import { type } from "os";
 import React from "react";
 
 interface props {
