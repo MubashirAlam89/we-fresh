@@ -30,7 +30,7 @@ export const GotQuestions = () => {
           </h1>
           <p className="text-2xl">Perfect, we've got answers!</p>
         </div>
-        <div className="accordianData flex flex-col max-h-full transition-all  gap-5 max-md:gap-0 mt-10">
+        <div className="accordianData flex flex-col gap-5 max-md:gap-0 mt-10">
           {accordianData.map((acrdn, i) => (
             <Accordian
               key={i}
