@@ -1,8 +1,15 @@
 import { Input } from "./common-componenets/input";
 import { Button } from "./common-componenets/button";
 import Image from "next/image";
+import { useState } from "react";
 
 export const HeroSection = () => {
+  const [inpValue, setInpValue] = useState<string>("");
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (/^[0-9]+$/.test(e.target.value) || e.target.value === "") {
+      setInpValue(e.target.value);
+    }
+  };
   return (
     <div className="relative">
       {/* absolute curves */}
@@ -82,7 +89,12 @@ export const HeroSection = () => {
           </h1>
           <div className="max-w-xl flex justify-between items-center gap-3">
             <div className="w-full">
-              <Input placeholder="Enter phone number" />
+              <Input
+                maxLength={15}
+                inpValue={inpValue}
+                onChange={handleOnChange}
+                placeholder="Enter phone number"
+              />
             </div>
             <div>
               <Button styles={""} content="Send" />
