@@ -1,38 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WeFresh Landing Page
 
-## Getting Started
+![WeFresh Logo](./public/logo.png)
 
-First, run the development server:
+Welcome to WeFresh Landing Page, an online shopping mart built using Next.js with TypeScript and Tailwind CSS.
+
+## Introduction
+
+WeFresh Landing Page is a modern and responsive online shopping mart designed to provide users with a seamless shopping experience. This project showcases the power of Next.js, TypeScript, and Tailwind CSS in creating fast, dynamic, and visually appealing web applications.
+
+## Features
+
+- Browse a wide range of products
+- Search for specific items
+- User-friendly and intuitive interface
+- Smooth navigation and responsive design
+- Explore featured deals and offers
+
+## Live Demo.
+
+for live demo of WeFresh &#128073; <a href="https://we-fresh-project.netlify.app">click here.</a>
+
+![WeFresh Landing Page Screenshot](./screenshot-1.jpg)
+![WeFresh Landing Page Screenshot](./screenshot-2.jpg)
+
+## Technologies Used
+
+- **[Next js](https://nextjs.org/):** A React framework for building server-rendered applications.
+- **[Typescript](https://www.typescriptlang.org/):** A typed superset of JavaScript that compiles to plain JavaScript.
+- **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapid UI development.
+- **[Netlify](https://.com/):** Hosting and continuous deployment platform.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository from GitHub:
+
+```bash
+git clone https://github.com/MubashirAlam89/we-fresh.git
+```
+
+2. Change into the project directory:
+
+```bash
+cd we-fresh
+```
+
+3. Install the project dependencies using npm (Node Package Manager):
+
+```bash
+npm install
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+We welcome contributions from the community! If you find any issues or want to add new features, please follow these steps:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Fork the repository.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+2. Create a new branch:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+git checkout -b feature-name
+```
 
-## Learn More
+3. Make your changes and commit them:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git commit -m 'Add some feature'
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Push to the branch:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+git push origin feature-name
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Open a pull request.
