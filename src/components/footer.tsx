@@ -31,7 +31,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className="font-semibold text-black">SERVICE AREA</h2>
+          <h2 className="font-semibold text-black">ABOUT</h2>
           <ul className="flex flex-col gap-2 mt-4">
             <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
               Story
@@ -45,7 +45,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className="font-semibold text-black">SERVICE AREA</h2>
+          <h2 className="font-semibold text-black">HELP</h2>
           <ul className="flex flex-col gap-2 mt-4">
             <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
               Help centre
