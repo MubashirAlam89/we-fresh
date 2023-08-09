@@ -16,16 +16,16 @@ export const Footer = () => {
         <div>
           <h2 className="font-semibold text-black">SERVICE AREA</h2>
           <ul className="flex flex-col gap-2 mt-4">
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Lorem ipsum dol
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Psum dolor
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Sum dolor
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Lorem ipsum
             </li>
           </ul>
@@ -33,13 +33,13 @@ export const Footer = () => {
         <div>
           <h2 className="font-semibold text-black">ABOUT</h2>
           <ul className="flex flex-col gap-2 mt-4">
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Story
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Read our blog
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Sign up to deliver
             </li>
           </ul>
@@ -47,16 +47,16 @@ export const Footer = () => {
         <div>
           <h2 className="font-semibold text-black">HELP</h2>
           <ul className="flex flex-col gap-2 mt-4">
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Help centre
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Read FAQs
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Community
             </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-0 transition-all">
+            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
               Security
             </li>
           </ul>
