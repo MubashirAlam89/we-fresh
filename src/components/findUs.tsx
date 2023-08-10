@@ -3,7 +3,7 @@ import { Button } from "./common-componenets/button";
 import Image from "next/image";
 import { useState } from "react";
 
-export const FindUs = () => {
+export const FindUs = ({ findUsSection }: any) => {
   const [inpValue, setInpValue] = useState<string>("");
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInpValue(e.target.value);
@@ -42,8 +42,9 @@ export const FindUs = () => {
         <div className="w-2/4 max-lg:w-full flex justify-center items-center">
           <div className="relative w-full">
             <Image
-              src={"/find-us-section-images/find-us-img.png"}
-              alt="find-us"
+              // src={"/find-us-section-images/find-us-img.png"}
+              src={`https:${findUsSection.image.fields.file.url}`}
+              alt={findUsSection.image.fields.title}
               width={300}
               height={200}
               className="w-full rounded-lg"
