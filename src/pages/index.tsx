@@ -92,7 +92,6 @@ export const getStaticProps: GetStaticProps<{
   const copyright = copyrightData.items;
   const seo = seoData.items;
   const footer = footerData.items;
-
   return {
     props: {
       websiteLogos,
@@ -161,9 +160,6 @@ export default function Home({
       <GetTheApp getTheAppSection={getTheAppSection[0].fields} />
       <ForBusiness forBusiness={forBusinessSection[0].fields} />
       <Footer
-        footerSeviceArea={footerSeviceArea}
-        footerAbout={footerAbout}
-        footerHelp={footerHelp}
         websiteLogos={websiteLogos[0].fields}
         copyright={copyright[0].fields}
         footer={footer}
