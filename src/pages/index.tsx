@@ -12,7 +12,7 @@ import { GotQuestions } from "@/components/gotQuestion";
 import Head from "next/head";
 import { createClient } from "contentful";
 import { GetStaticProps } from "next";
-import Meta from "@/components/meta";
+import Meta from "@/components/metaData";
 import { useEffect } from "react";
 
 export const getStaticProps: GetStaticProps<{
@@ -65,20 +65,14 @@ export const getStaticProps: GetStaticProps<{
   const forBusinessSectionData = await client.getEntries({
     content_type: "forBusiness",
   });
-  const serviceAreaData = await client.getEntries({
-    content_type: "serviceArea",
-  });
-  const aboutData = await client.getEntries({
-    content_type: "about",
-  });
-  const helpData = await client.getEntries({
-    content_type: "help",
-  });
   const copyrightData = await client.getEntries({
     content_type: "copyright",
   });
   const seoData = await client.getEntries({
     content_type: "seo",
+  });
+  const footerData = await client.getEntries({
+    content_type: "footer",
   });
 
   const websiteLogos = websiteLogosData.items;
@@ -95,11 +89,9 @@ export const getStaticProps: GetStaticProps<{
   const contacts = contactsData.items;
   const getTheAppSection = getTheAppSectionData.items;
   const forBusinessSection = forBusinessSectionData.items;
-  const footerSeviceArea = serviceAreaData.items;
-  const footerAbout = aboutData.items;
-  const footerHelp = helpData.items;
   const copyright = copyrightData.items;
   const seo = seoData.items;
+  const footer = footerData.items;
 
   return {
     props: {
@@ -117,11 +109,9 @@ export const getStaticProps: GetStaticProps<{
       contacts,
       getTheAppSection,
       forBusinessSection,
-      footerSeviceArea,
-      footerAbout,
-      footerHelp,
       copyright,
       seo,
+      footer,
     },
   };
 };
@@ -141,14 +131,12 @@ export default function Home({
   contacts,
   getTheAppSection,
   forBusinessSection,
-  footerSeviceArea,
-  footerAbout,
-  footerHelp,
   copyright,
   seo,
+  footer,
 }: any) {
   useEffect(() => {
-    console.log(seo[0].fields);
+    console.log(footer);
   });
   return (
     <>
@@ -178,6 +166,7 @@ export default function Home({
         footerHelp={footerHelp}
         websiteLogos={websiteLogos[0].fields}
         copyright={copyright[0].fields}
+        footer={footer}
       />
     </>
   );
