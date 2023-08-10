@@ -3,7 +3,7 @@ import { Button } from "./common-componenets/button";
 import Image from "next/image";
 import { useState } from "react";
 
-export const HeroSection = () => {
+export const HeroSection = ({ heroData }: any) => {
   const [inpValue, setInpValue] = useState<string>("");
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (/^[0-9]+$/.test(e.target.value) || e.target.value === "") {
@@ -84,8 +84,9 @@ export const HeroSection = () => {
         {/* the smarter way section start */}
         <div className="w-full pr-20 max-xl:pr-10 max-lg:pr-0 -mt-10 max-lg:mt-0  text-white flex flex-col max-lg:items-center max-lg:text-center justify-between gap-7 max-xl:gap-5">
           <h1 className="text-6xl max-xl:text-5xl max-md:text-4xl">
-            The smarter way <br />
-            <span className="font-semibold">to order your food</span>
+            {heroData.heading1}
+            <br />
+            <span className="font-semibold">{heroData.heading2}</span>
           </h1>
           <div className="max-w-xl flex justify-between items-center gap-3">
             <div className="w-full">
@@ -122,7 +123,7 @@ export const HeroSection = () => {
         <div className="w-[70%] max-xl:w-[60%] max-xl:mr-0  max-lg:w-3/4 max-md:w-full flex p-16 max-sm:p-10 -mr-16 justify-end max-lg:justify-center relative">
           <Image
             className="w-full"
-            src={"/iphone_black.png"}
+            src={`https:${heroData.heroImage.fields.file.url}`}
             alt=""
             width={500}
             height={1000}
