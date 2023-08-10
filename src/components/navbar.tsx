@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Button } from "./common-componenets/button";
 
-export const Navbar = () => {
+export const Navbar = ({ navData, websiteLogos }: any) => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
   return (
@@ -14,7 +14,7 @@ export const Navbar = () => {
           <Link href={"/"}>
             <Image
               className="w-36"
-              src={"/logo.png"}
+              src={`https:${websiteLogos.firstLogo.fields.file.url}`}
               alt="logo"
               width={547}
               height={207}
@@ -22,7 +22,18 @@ export const Navbar = () => {
           </Link>
 
           <ul className="text-xl text-[#14243c] font-semibold flex justify-between gap-8 items-center max-md:hidden">
-            <Link href={"/"} className="hover:opacity-80 transition-all">
+            {navData.map((e: any, i: number) => {
+              return (
+                <Link
+                  key={i}
+                  href={`/${e.fields.href}`}
+                  className="hover:opacity-80 transition-all"
+                >
+                  {e.fields.link}
+                </Link>
+              );
+            })}
+            {/* <Link href={"/"} className="hover:opacity-80 transition-all">
               Our App
             </Link>
             <Link href={"/"} className="hover:opacity-80 transition-all">
@@ -33,7 +44,7 @@ export const Navbar = () => {
             </Link>
             <Link href={"/"} className="hover:opacity-80 transition-all">
               English
-            </Link>
+            </Link> */}
           </ul>
           <FaBars
             onClick={() => {
@@ -54,7 +65,7 @@ export const Navbar = () => {
           <Link href={"/"}>
             <Image
               className="w-36"
-              src={"/logo.png"}
+              src={`https:${websiteLogos.firstLogo.fields.file.url}`}
               alt="logo"
               width={547}
               height={207}
@@ -80,7 +91,20 @@ export const Navbar = () => {
           </div>
         </div>
         <ul className="w-full flex mt-8 flex-col justify-center text-xl  text-center text-white items-center">
-          <Link href={"/"} className="py-4 border-t-[1px] w-full border-white">
+          {navData.map((e: any, i: number) => {
+            return (
+              <Link
+                key={i}
+                href={`/${e.fields.href}`}
+                className={`py-4 ${
+                  i == navData.length - 1 ? "border-y-[1px]" : "border-t-[1px]"
+                } w-full border-white`}
+              >
+                {e.fields.link}
+              </Link>
+            );
+          })}
+          {/* <Link href={"/"} className="py-4 border-t-[1px] w-full border-white">
             Our App
           </Link>
           <Link href={"/"} className="py-4 border-t-[1px] w-full border-white">
@@ -91,7 +115,7 @@ export const Navbar = () => {
           </Link>
           <Link href={"/"} className="py-4 border-y-[1px] w-full border-white">
             English
-          </Link>
+          </Link> */}
           <Button
             content="Sign up"
             styles={{
