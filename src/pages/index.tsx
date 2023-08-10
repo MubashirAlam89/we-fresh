@@ -12,6 +12,8 @@ import { GotQuestions } from "@/components/gotQuestion";
 import Head from "next/head";
 import { createClient } from "contentful";
 import { GetStaticProps } from "next";
+import Meta from "@/components/meta";
+import { useEffect } from "react";
 
 export const getStaticProps: GetStaticProps<{
   services: any;
@@ -75,6 +77,9 @@ export const getStaticProps: GetStaticProps<{
   const copyrightData = await client.getEntries({
     content_type: "copyright",
   });
+  const seoData = await client.getEntries({
+    content_type: "seo",
+  });
 
   const websiteLogos = websiteLogosData.items;
   const navLinks = navLinksData.items;
@@ -94,6 +99,7 @@ export const getStaticProps: GetStaticProps<{
   const footerAbout = aboutData.items;
   const footerHelp = helpData.items;
   const copyright = copyrightData.items;
+  const seo = seoData.items;
 
   return {
     props: {
@@ -115,6 +121,7 @@ export const getStaticProps: GetStaticProps<{
       footerAbout,
       footerHelp,
       copyright,
+      seo,
     },
   };
 };
@@ -138,12 +145,14 @@ export default function Home({
   footerAbout,
   footerHelp,
   copyright,
+  seo,
 }: any) {
+  useEffect(() => {
+    console.log(seo[0].fields);
+  });
   return (
     <>
-      <Head>
-        <title>We Fresh</title>
-      </Head>
+      <Meta seo={seo[0].fields} />
       <Navbar navData={navLinks} websiteLogos={websiteLogos[0].fields} />
       <HeroSection heroData={hero[0].fields} />
       <MoreServices services={services} />
