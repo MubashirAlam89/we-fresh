@@ -1,7 +1,7 @@
 import { weFreshCards } from "@/constants/data";
 import Image from "next/image";
 
-export const FreshMart = () => {
+export const FreshMart = ({ freshMartImage }: any) => {
   return (
     <div className="max-w-[1200px] max-lg:flex-col max-lg:justify-center max-lg:items-center px-10 max-md:px-5 py-28 max-md:py-12 mx-auto flex justify-between items-center gap-20 max-xl:gap-10">
       {/* <div className="w-2/4 max-lg:w-full relative p-10"> */}
@@ -16,8 +16,8 @@ export const FreshMart = () => {
           />
         </div>
         <Image
-          src={"/fresh-mart-section-images/iphone_black2.png"}
-          alt="iphone"
+          src={`https:${freshMartImage.freshMartImage.fields.file.url}`}
+          alt={freshMartImage.freshMartImage.fields.title}
           width={500}
           height={1000}
           className="w-full"

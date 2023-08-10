@@ -11,7 +11,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { ServiceCard } from "./serviceCard";
 import { cartogoryCardsData } from "@/constants/data";
 
-export const Carousel = () => {
+export const Carousel = ({ services }: any) => {
   return (
     <Swiper
       slidesPerView={1.5}
@@ -21,11 +21,14 @@ export const Carousel = () => {
       modules={[Pagination, Navigation]}
       className="mySwiper w-full bg-blue-100 "
     >
-      {cartogoryCardsData.map((e, i) => {
+      {services.map((e: any, i: number) => {
         return (
           <SwiperSlide key={i} className="w-fit">
             <div className="bg-white">
-              <ServiceCard src={e.imgSrc} title={e.title} />
+              <ServiceCard
+                src={e.fields.item.fields.file.url}
+                title={e.fields.item.fields.title}
+              />
             </div>
           </SwiperSlide>
         );
