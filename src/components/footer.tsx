@@ -1,13 +1,19 @@
 import Image from "next/image";
 
-export const Footer = () => {
+export const Footer = ({
+  websiteLogos,
+  footerSeviceArea,
+  footerAbout,
+  footerHelp,
+  copyright,
+}: any) => {
   return (
     <div className="bg-[#F2F9FF] text-xl text-gray-500">
       <div className="max-w-[1200px] mx-auto px-10 max-md:px-5 py-20 grid grid-cols-5 grid-rows-1 max-md:flex max-md:flex-col gap-5 ">
         <div className="">
           <Image
-            src={"/logo-2.png"}
-            alt="logo"
+            src={`https:${websiteLogos.secondLogo.fields.file.url}`}
+            alt={websiteLogos.secondLogo.fields.title}
             className="w-32"
             height={80}
             width={200}
@@ -16,49 +22,46 @@ export const Footer = () => {
         <div>
           <h2 className="font-semibold text-black">SERVICE AREA</h2>
           <ul className="flex flex-col gap-2 mt-4">
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Lorem ipsum dol
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Psum dolor
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Sum dolor
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Lorem ipsum
-            </li>
+            {footerSeviceArea.map((e: any, i: number) => {
+              return (
+                <li
+                  key={i}
+                  className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all"
+                >
+                  {e.fields.item}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div>
           <h2 className="font-semibold text-black">ABOUT</h2>
           <ul className="flex flex-col gap-2 mt-4">
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Story
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Read our blog
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Sign up to deliver
-            </li>
+            {footerAbout.map((e: any, i: number) => {
+              return (
+                <li
+                  key={i}
+                  className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all"
+                >
+                  {e.fields.item}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div>
           <h2 className="font-semibold text-black">HELP</h2>
           <ul className="flex flex-col gap-2 mt-4">
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Help centre
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Read FAQs
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Community
-            </li>
-            <li className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all">
-              Security
-            </li>
+            {footerHelp.map((e: any, i: number) => {
+              return (
+                <li
+                  key={i}
+                  className="cursor-pointer hover:opacity-80 max-md:hover:opacity-100 transition-all"
+                >
+                  {e.fields.item}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div>
@@ -82,7 +85,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="px-5 text-center py-4 border-t-2 border-gray-200">
-        <p>&copy; 2020 WeFresh, All Rights Reserved.</p>
+        <p>&copy; {copyright.copyright}</p>
       </div>
     </div>
   );
