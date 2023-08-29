@@ -83,3 +83,7 @@ git push origin feature-name
 ```
 
 5. Open a pull request.
+
+<br>
+<hr>
+made with &#128151; by <a href="https://www.mubashiralam.com">"Mubashir Alam"</a>.
